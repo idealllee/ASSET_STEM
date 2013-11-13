@@ -1,0 +1,620 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+	ASSET Blog | ASSET STEM Education
+</title><base href="https://online.assetinc.org/ICS/">
+    <link rel="stylesheet" type="text/css" href="UI/Common/Styles/siteStyle.css" /> 
+
+<link rel="stylesheet" type="text/css" href="UI/Common/Styles/divStyle.css" />
+
+<link href="/ICS/Portlets/ICS/NewsPortlet/NewsStyle.css" type="text/css" rel="stylesheet">
+<link id="head_lnkPrint" rel="stylesheet" type="text/css" media="print" href="UI/Common/Styles/print.css"></link>
+ 
+<script type="text/javascript" src="UI/Common/Scripts/jcsfl.js?ver=062310.1"></script>
+<script type="text/javascript" src="UI/Common/Scripts/Utility.js?ver=042810.1"></script>
+<script type="text/javascript" src="UI/Common/Scripts/json2.js?ver=092409.1"></script>
+<script type="text/javascript" src="UI/Common/Scripts/jenz.js?ver=110211.2"></script>
+<script type="text/javascript" src="UI/Common/Scripts/PortletUtils.js?ver=082109.1"></script>
+<script type="text/javascript" src="UI/Common/Scripts/AJAX.js?ver=082109.1"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Globalization.js.aspx?id=df44cbfe82614f0ebd46547a1f409770"></script>
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="UI/Common/Styles/jQuery/jquery-ui-1.8.18.jics-default.css" />
+<!-- END Html Head Elements -->
+
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+
+	window.Portal =
+	{
+		url:			document.getElementsByTagName("base")[0].href,
+		uid:			null,
+		timeout:		3600,
+        SessionMonitor: JCSL.JICS.get_session_monitor()
+		
+	};
+	
+	Portal.SessionMonitor.start();
+	
+    function pageLoad() {
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+    }
+    function EndRequestHandler(sender, args) {
+        if (args.get_error()) {
+            var reg = new RegExp("Sys.*?: ", "g");
+            alert(args.get_error().message.replace(reg, ""));
+            args.set_errorHandled(true);
+        }
+    }	
+</script>
+
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon"/>
+<style id="customHead_custom" type="text/css" media="all">@import url( clientconfig/HtmlContent/custom.css );</style><link rel="stylesheet" type="text/css" href="/ICSFileServer/Themes/custom_JustLeft/style.css" />
+<script type="text/javascript" src="/ICSFileServer/Themes/custom_JustLeft/javascript.js"></script>
+
+
+</head>
+<body onload="doLoad();">
+    <div id="siteWrapper">
+        <form name="MAINFORM" method="post" action="/ICS/ASSET_Blog.jnz" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div>
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExMDg2NjQxNzIPEGRkZBYGAgMPFgIeBFRleHQFFjxkaXYgaWQ9InNpdGVXcmFwcGVyIj5kAgUPZBYQAhUPFgIfAAUnPGRpdiBpZD0ibWFpbkxheW91dCIgY2xhc3M9ImNvbnRhaW5lciI+ZAIXDxYCHwAFJDxkaXYgaWQ9InNpZGVCYXIiIGNsYXNzPSJjb250YWluZXIiPmQCHw8WAh8ABTM8ZGl2IGNsYXNzPSJzaWRlQmFyRm9vdCBjb250YWluZXJGb290Ij48L2Rpdj48L2Rpdj5kAiEPFgIfAAUlPGRpdiBpZD0icG9ydGxldHMiIGNsYXNzPSJjb250YWluZXIiPmQCIw8PFgIeB1Zpc2libGVoZGQCKQ9kFgICAw8UKwACZGQWCAICDxYCHwFoZAIEDxYCHwFoZAIID2QWAmYPDxYCHghfX0xvYWRlZGdkFgYCBQ8PFgIfAWhkZAIHDxYCHwFoZAILDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWAgIBD2QWAgIBD2QWAgIBD2QWDgIBDw8WBB8ABUtJbnZlc3RpbmcgaW4gSW5ub3ZhdGlvbiAoaTMpIEdyYW50IEltcGFjdGluZyBTVEVNIEVkdWNhdGlvbiBpbiBQZW5uc3lsdmFuaWEeC05hdmlnYXRlVXJsBWkvSUNTL0FTU0VUX0Jsb2cuam56P3BvcnRsZXQ9QmxvZyZzY3JlZW49VmlldytQb3N0JnNjcmVlblR5cGU9bmV4dCZJZD1jMzE3MDEwNS1kNGIzLTQwOWYtOTAxYi1kYzhkNzA4MzkxYTJkZAIDDw8WAh8BaGRkAgUPDxYCHwFoZGQCBg8PFgIfAWhkZAIIDw8WAh8ABSNUaHUsIE9jdG9iZXIgMjQgMjAxMyAmbmJzcDsgMzowMCBQTWRkAgoPDxYCHwFoZGQCDg9kFggCAQ8PFgIfBAV0L0lDUy9BU1NFVF9CbG9nLmpuej9wb3J0bGV0PUJsb2cmc2NyZWVuPVZpZXcrUG9zdCZzY3JlZW5UeXBlPW5leHQmSWQ9YzMxNzAxMDUtZDRiMy00MDlmLTkwMWItZGM4ZDcwODM5MWEyI2FkZENvbW1lbnRkZAIDDxYCHwFoZAIFDw8WAh8BaGRkAgcPDxYCHwFoZGQCAQ9kFgICAQ9kFgICAQ9kFgICAQ9kFg4CAQ8PFgQfAAUYQ29ubmVjdGVkIEVkdWNhdG9yIE1vbnRoHwQFaS9JQ1MvQVNTRVRfQmxvZy5qbno/cG9ydGxldD1CbG9nJnNjcmVlbj1WaWV3K1Bvc3Qmc2NyZWVuVHlwZT1uZXh0JklkPWY4ZTNmMjk5LTAyMjEtNDg4Yy05YTk5LTUzNWI2NTlmYmM5N2RkAgMPDxYCHwFoZGQCBQ8PFgIfAWhkZAIGDw8WAh8BaGRkAggPDxYCHwAFJFRodSwgT2N0b2JlciAxNyAyMDEzICZuYnNwOyAxMTo1NiBBTWRkAgoPDxYCHwFoZGQCDg9kFggCAQ8PFgIfBAV0L0lDUy9BU1NFVF9CbG9nLmpuej9wb3J0bGV0PUJsb2cmc2NyZWVuPVZpZXcrUG9zdCZzY3JlZW5UeXBlPW5leHQmSWQ9ZjhlM2YyOTktMDIyMS00ODhjLTlhOTktNTM1YjY1OWZiYzk3I2FkZENvbW1lbnRkZAIDDxYCHwFoZAIFDw8WAh8BaGRkAgcPDxYCHwFoZGQCAg9kFgICAQ9kFgICAQ9kFgICAQ9kFg4CAQ8PFgQfAAUiRXhwbG9yaW5nIFByb2Zlc3Npb25hbCBEZXZlbG9wbWVudB8EBWkvSUNTL0FTU0VUX0Jsb2cuam56P3BvcnRsZXQ9QmxvZyZzY3JlZW49VmlldytQb3N0JnNjcmVlblR5cGU9bmV4dCZJZD0yNjI0M2RmNi05MGJmLTRkN2EtOGE4Yy03OWI1NDVlNjEzMTdkZAIDDw8WAh8BaGRkAgUPDxYCHwFoZGQCBg8PFgIfAWhkZAIIDw8WAh8ABSJUdWUsIE9jdG9iZXIgOCAyMDEzICZuYnNwOyA5OjE5IEFNZGQCCg8PFgIfAWhkZAIOD2QWCAIBDw8WAh8EBXQvSUNTL0FTU0VUX0Jsb2cuam56P3BvcnRsZXQ9QmxvZyZzY3JlZW49VmlldytQb3N0JnNjcmVlblR5cGU9bmV4dCZJZD0yNjI0M2RmNi05MGJmLTRkN2EtOGE4Yy03OWI1NDVlNjEzMTcjYWRkQ29tbWVudGRkAgMPFgIfAWhkAgUPDxYCHwFoZGQCBw8PFgIfAWhkZAIDD2QWAgIBD2QWAgIBD2QWAgIBD2QWDgIBDw8WBB8ABR5UaGUgSW1wb3J0YW5jZSBvZiBTVEVNIEZsdWVuY3kfBAVpL0lDUy9BU1NFVF9CbG9nLmpuej9wb3J0bGV0PUJsb2cmc2NyZWVuPVZpZXcrUG9zdCZzY3JlZW5UeXBlPW5leHQmSWQ9YjI0YzdkYWEtOThlYi00NzkzLTlmOGQtNDY1NDYwZmY5MWYzZGQCAw8PFgIfAWhkZAIFDw8WAh8BaGRkAgYPDxYCHwFoZGQCCA8PFgIfAAUmVHVlLCBTZXB0ZW1iZXIgMTAgMjAxMyAmbmJzcDsgMTA6MDQgQU1kZAIKDw8WAh8BaGRkAg4PZBYIAgEPDxYCHwQFdC9JQ1MvQVNTRVRfQmxvZy5qbno/cG9ydGxldD1CbG9nJnNjcmVlbj1WaWV3K1Bvc3Qmc2NyZWVuVHlwZT1uZXh0JklkPWIyNGM3ZGFhLTk4ZWItNDc5My05ZjhkLTQ2NTQ2MGZmOTFmMyNhZGRDb21tZW50ZGQCAw8WAh8BaGQCBQ8PFgIfAWhkZAIHDw8WAh8BaGRkAgoPDxYCHwFoZGQCKw8WAh8ABTQ8ZGl2IGNsYXNzPSJwb3J0bGV0c0Zvb3QgY29udGFpbmVyRm9vdCI+PC9kaXY+PC9kaXY+ZAItDxYCHwAFNjxkaXYgY2xhc3M9Im1haW5MYXlvdXRGb290IGNvbnRhaW5lckZvb3QiPjwvZGl2PjwvZGl2PmQCBw8WAh8ABQY8L2Rpdj5kZHEl+ldaokTDw2G8M85zkDsCdp0H" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=jPzW9jSSGqVXSEOx_Qy6_Kq_npwDdaM4gKcTXxE_7N_VvmNKGZ8tMkYqV6AqyTFoQzty_RLV4VKzh77-x2JkjsAYvek1&amp;t=635083016141708196" type="text/javascript"></script>
+
+
+<script src="/ICS/ScriptResource.axd?d=52idukimt6SMJQa-evwah0ZqDW2BZ2d5vL6tLpgadQXwL4XxPmJp5Bu8rlXuMZCDGpwEotrc_3yWPWNvTbJZLRKQjVxYvl8H4TtYuyJmKKWxX5hW0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=w7MOS8TwMUyVNHIshPPalbk62oBB2snBbprTQSQfCyt3Oe6bGnkNZKfkM2PZVSbwRE32unNCYIJ7RXxIWUZvu84Za4p1KmQ3F7vC44s_P6Rv3NZjfZtaUgyDu-hd4p9YrgrOew2&amp;t=245582f9" type="text/javascript"></script>
+
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', document.getElementById('MAINFORM'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+            
+            <input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="1eba98f9-9ec9-490c-a912-2f221008fde4" />
+                
+            
+            <p class="accessibility"><a href="#content" title="Skip to Content" class="accessibility">Skip To Content</a> </p>
+            <div id="masthead"><h1><a href="." title="ASSET Inc. Customer Portal">Jenzabar University</a></h1></div>
+            <div id="welcomeBackBar"><span id="userLogin"><label for="userName">User Name:</label><input type="text" name="userName" id="userName" value=""/><label for="password">Password:</label><input type="password" name="password" id="password"  /><input type="submit" name="btnLogin" value="Login" id="btnLogin" /></span></div>
+            <div id="errorMessage"></div>
+            
+            <div id="headerTabs"><ul><li class="tab_Home firstTab selected"><a href="/ICS/">Home</a></li></ul></div>
+            <div id="mainCrumbs">
+                
+	            <div id="youAreHere">
+		            <span class="crumbs">You are here:&nbsp; <a href="/ICS/ASSET_Blog.jnz" title="ASSET Blog">ASSET Blog</a> &nbsp;</span>
+	            </div>
+            </div>
+            <div id="mainLayout" class="container">
+                <div id="sideBar" class="container">
+	                
+	                <div class="sideSection" id="thisContext"><h2><a href="/ICS/" title="ASSET STEM Education">ASSET STEM Education</a></h2><ul id="contextPages"><li><a href="/ICS/Home.jnz" title="Home">Home</a></li><li class="currentPage"><a href="/ICS/ASSET_Blog.jnz" title="ASSET Blog">ASSET Blog</a></li></ul></div><div id="quickLinks"><h3>Quick Links</h3><ul id="globalLinks"><li><a target="_blank" href="https://registration.assetinc.org/modules/" title="Professional Development Registration">Professional Development</a></li><li><a target="_blank" href="http://servicesonline.assetinc.org/" title="">ASSET Services Online</a></li></ul></div>
+	                
+	            <div class="sideBarFoot containerFoot"></div></div>
+                <div id="portlets" class="container">
+	                <div id="pageTitle">
+		                <div ID="pageTitleButtons">
+			                
+			                <a id="btnPrintView" title="" href="javascript:__doPostBack('btnPrintView','')"  class="imageAndText" /><img src="/ICS/UI/Common/Images/PortletImages/Icons/print.gif" alt="" /> <span>Printer Friendly</span></a>
+		                </div>
+		                <h2><a href="/ICS/ASSET_Blog.jnz" title="ASSET Blog" id="contextName">ASSET Blog</a></h2>
+	                </div>
+	                <a name="content"></a>
+	                <div id="PORTLETGRID" class="one_column container"><div class="pColumn pColumn1 container"><div id="pg0_BlogPortlet" class="portlet pt_BlogPortlet pi_Blog" style="z-index:1;"><div class="pHead"><h3><a href="/ICS/ASSET_Blog.jnz?portlet=Blog" title="Go to main Blog screen">Blog</a></h3><div> <a class="help" target="blank" href="Help/Base/Blog.htm" title="Get help using 'Blog'"><img alt="help" src="/ICS/ui/common/images/help.gif" title="Get help using 'Blog'" /></a></div></div><div class="pContent NewsPortlet">
+
+<div class="pSection">
+    
+<!-- Dynamic Style -->
+<style type="text/css">
+    div.postStatusHigh
+    {
+	    padding-left:16px;
+	    background: #a90000 url(/ICS/ui/common/images/PortletImages/Icons/highPriority.gif) no-repeat  0px 3px;	
+    }
+
+    div.postStatusUnRead
+    {
+	    padding-left:16px;
+	    background: #7da7d9 url(/ICS/ui/common/images/PortletImages/Icons/arrowRight.gif) no-repeat  0px 3px;	
+    }
+    
+    div.postStatusPending
+    {
+	    padding-left:16px;
+	    background: #555 url(/ICS/ui/common/images/PortletImages/Icons/pending_post.gif) no-repeat  0px 3px;	
+    }
+</style> 
+    
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script language="JavaScript" src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+    
+       
+    
+    <div style="clear:both;"></div>
+    
+            
+<div class="postWrapper" >
+    <div id="pg0_V__rptPost_ctl00__newsPost__panPostStatus">
+	
+        <div id="pg0_V__rptPost_ctl00__newsPost__divPostItem" class="postItem">
+		
+            <div class="postTitle">
+                <a id="pg0_V__rptPost_ctl00__newsPost__hypTitle" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=c3170105-d4b3-409f-901b-dc8d708391a2">Investing in Innovation (i3) Grant Impacting STEM Education in Pennsylvania</a>  
+            </div>
+            <span id="pg0_V__rptPost_ctl00__newsPost__lblDateAttribution" class="postInfo">Thu, October 24 2013 &nbsp; 3:00 PM</span>
+            
+            <div id="pg0_V__rptPost_ctl00__newsPost__panContent" class="postContent">
+			
+            <div class="wysiwygtext">
+  <div>
+    <span style="color: rgb(0, 117, 189); font-family: Tahoma; font-size: 12pt;">
+      <strong>&#8220;Without question, I can prove
+to anyone walking into my classroom how my implementation of formative
+assessment has improved student learning. In my 15 years of teaching I have never
+had a developmental opportunity which has so positively impacted my teaching
+and student learning.&#8221; &#160; </strong>
+    </span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="color: rgb(0, 117, 189); font-family: Tahoma; font-size: 12pt;">
+      <em>Rick
+Samoros, C.M. Musser Elementary School</em>
+    </span>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+      <em>
+      </em>
+    </span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">In 2010, the
+U.S. Department of Education launched its Investing in Innovation (i3) grant
+competition to provide $650 million in grants to applicants with a record of
+innovative practices for advancing student achievement and attainment. ASSET
+STEM Education was one of only 49
+recipients to receive this prestigious first-round i3 grant.
+</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">Through the five-year i3 Validation grant, ASSET is:</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <ul>
+      <li>
+        <span style="font-family: Tahoma; font-size: 12pt;">Working with 24 rural and high-needs Pennsylvania K-6
+schools &#160;</span>
+      </li>
+      <li>
+        <span style="font-family: Tahoma; font-size: 12pt;">Providing ongoing advanced professional development to more
+than 400 educators and administrators with a concentration on inquiry,
+assessment, science and literacy, and problem-solving math skills &#160;</span>
+      </li>
+      <li>
+        <span style="font-family: Tahoma; font-size: 12pt;">Assisting in the development of Professional Learning Communities (PLCs) in
+each school, situating the learning from professional development to ensure
+classroom implementation and program sustainability &#160;</span>
+      </li>
+      <li>
+        <span style="font-family: Tahoma; font-size: 12pt;">Establishing and supporting 41 STEM coaches in the schools; and &#160;</span>
+      </li>
+      <li>
+        <span style="font-family: Tahoma; font-size: 12pt;">Increasing educator access to
+ASSET&#8217;s full spectrum of professional development — via the ASSET headquarters
+in Pittsburgh, a second regional
+professional development center in Malvern
+on the campus of Penn State Great Valley and a third center in Bloomsburg.</span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+      <strong>In years one and two of the grant, 28,752 students were impacted — 89% of who were high-needs.</strong> ASSET&#8217;s i3 grant will continue
+through 2015 so full program evaluation and quantitative data are still in
+process and will be available following completion of the grant. However,
+internal surveys of ASSET Professional Development Specialists, and i3 teachers
+and administrators, revealed initial common themes and testimonials such as <strong>increases
+in educator leadership skills and student achievement</strong>. This
+information is detailed in the report <em>ASSET
+Investing in Innovation (i3) Grant: Years 1 &#8211; 3</em>. </span>
+    <span style="color: rgb(0, 117, 189); font-family: Tahoma; font-size: 12pt;">
+      <strong>
+        <a title="i3 report" href="http://www.assetinc.org/media/42463/i3_report_website_version_1.pdf" target="_blank">Click here to download the
+report</a>
+      </strong>
+    </span>
+    <span style="font-family: Tahoma; font-size: 12pt;">. 
+</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">Cynthia Pulkowski</span>
+  </div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">Executive Director&#160;</span>
+  </div>
+</div>
+		</div>
+            <div id="pg0_V__rptPost_ctl00__newsPost__panDiscuss" class="postDiscuss">
+			
+                <a id="pg0_V__rptPost_ctl00__newsPost__hypDiscuss" class="postDiscussLink" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=c3170105-d4b3-409f-901b-dc8d708391a2#addComment"><img src="/ICS/ui/common/images/PortletImages/Icons/comments.gif" style="border-width:0px;" />DISCUSS (0)</a>
+                
+                &nbsp;
+            
+		</div>
+            
+        
+	</div>
+    
+</div>
+</div> 
+        
+            
+<div class="postWrapper" >
+    <div id="pg0_V__rptPost_ctl01__newsPost__panPostStatus">
+	
+        <div id="pg0_V__rptPost_ctl01__newsPost__divPostItem" class="postItem">
+		
+            <div class="postTitle">
+                <a id="pg0_V__rptPost_ctl01__newsPost__hypTitle" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=f8e3f299-0221-488c-9a99-535b659fbc97">Connected Educator Month</a>  
+            </div>
+            <span id="pg0_V__rptPost_ctl01__newsPost__lblDateAttribution" class="postInfo">Thu, October 17 2013 &nbsp; 11:56 AM</span>
+            
+            <div id="pg0_V__rptPost_ctl01__newsPost__panContent" class="postContent">
+			
+            <div class="wysiwygtext">
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">This month educators around the world are celebrating
+<a href="http://connectededucators.org/">Connected Educator Month</a> (CEM). This annual event was established by the U.S.
+Department of Education in August 2012 and 170+ education organizations and
+communities participated. The second annual Connected Educator Month is focused
+on &#8220;helping districts promote and integrate online social learning in their
+formal professional development&#8221; (<a href="http://connectededucators.org/about-connected-educator-month-2013/">"About CEM"</a>).
+CEM also aims to connect educators, deepen learning and inspire collaborative
+and innovative professional development. </span>
+  </div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+    </span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">One of the main themes of this year&#8217;s CEM is &#8220;Innovating
+STEM and Literacy.&#8221; This theme ties directly into one of ASSET&#8217;s advanced
+professional development offerings &#8211; Science
+and Literacy Institute. The institute delves into the connections between
+science and literacy, providing strategies that demonstrate how literacy
+components deepen science components. How do we learn science, and what does
+literacy look like in a science classroom? Setting the stage for scientific
+argumentation, educators learn how to assist students in having evidence-based
+discussions that increase their understanding and enhance their critical
+thinking and communication skills. For more information on the Science and
+Literacy Institute and upcoming dates, visit <a href="http://registration.assetinc.org/modules/shop/index.html?action=section&amp;OfferingID=94&amp;SectionID=666">ASSET's website</a>. </span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">To participate in Connected Educators Month, a variety of
+resources are offered to all educators. There are interactive webinars, forums,
+toolkits, book clubs, contests, opportunities to earn digital badges and more.
+Visit <a href="http://connectededucators.org/events/">CEM&#8217;s calendar</a>&#160;for an extensive list of all the events happening this month! Get involved and
+share your experiences! 
+</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">John Radzilowicz
+
+</span>
+  </div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">Director of Professional Development
+</span>
+  </div>
+</div>
+		</div>
+            <div id="pg0_V__rptPost_ctl01__newsPost__panDiscuss" class="postDiscuss">
+			
+                <a id="pg0_V__rptPost_ctl01__newsPost__hypDiscuss" class="postDiscussLink" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=f8e3f299-0221-488c-9a99-535b659fbc97#addComment"><img src="/ICS/ui/common/images/PortletImages/Icons/comments.gif" style="border-width:0px;" />DISCUSS (0)</a>
+                
+                &nbsp;
+            
+		</div>
+            
+        
+	</div>
+    
+</div>
+</div> 
+        
+            
+<div class="postWrapper" >
+    <div id="pg0_V__rptPost_ctl02__newsPost__panPostStatus">
+	
+        <div id="pg0_V__rptPost_ctl02__newsPost__divPostItem" class="postItem">
+		
+            <div class="postTitle">
+                <a id="pg0_V__rptPost_ctl02__newsPost__hypTitle" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=26243df6-90bf-4d7a-8a8c-79b545e61317">Exploring Professional Development</a>  
+            </div>
+            <span id="pg0_V__rptPost_ctl02__newsPost__lblDateAttribution" class="postInfo">Tue, October 8 2013 &nbsp; 9:19 AM</span>
+            
+            <div id="pg0_V__rptPost_ctl02__newsPost__panContent" class="postContent">
+			
+            <div class="wysiwygtext">
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">On September 25, ASSET&#8217;s Member Meeting and Showcase provided an overview of ASSET&#8217;s current and upcoming cross-curricular STEM professional development. Thank you to everyone who attended! Before breaking off to tour the showcase, participants engaged in a thoughtful discussion on effective professional development.</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <strong style="font-family: Tahoma; font-size: 12pt; color: #0075bd;">Some of the key characteristics of effective professional development brainstormed were:</strong>
+    <img align="right" style="padding-top: 5px;" alt="" src="http://www.assetinc.org/media/42239/member_showcase.jpg" />
+  </div>
+  <ul>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Interactive
+    </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Collaborative
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Embedded support
+    </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Provides instructional strategies
+    </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Real-world application
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Innovative
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Progressive
+    </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Ongoing</span>
+      <span style="font-family: Tahoma; font-size: 12pt;">
+      </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Current</span>
+    </li>
+  </ul>
+  <p>
+    <strong style="font-family: Tahoma; font-size: 12pt; color: #0075bd;">Benefits mentioned included:</strong>
+  </p>
+  <ul>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Student achievement/success
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Increased content knowledge
+    </span>
+    </li>
+    <li>
+      <span style="font-family: Tahoma; font-size: 12pt;">Inspires a passion and excitement for teaching</span>
+      <span style="font-family: Tahoma; font-size: 12pt;">
+      </span>
+    </li>
+  </ul>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">In addition to challenges brought up such as time and cost, there are various national and state initiatives currently impacting the education world as well. In light of these &#8220;forces of change&#8221; (i.e. PA Core Standards, Next Generation Science Standards, teacher evaluation system), effective holistic professional development that inspires educators and their students is more important than ever.
+</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">After the showcase, participants reflected on the benefits of the professional development offerings they learned about, including the integration of robotics (GigaPan and Arts &amp; Bots), ASSET&#8217;s iPad Notebook App and other technology; early childhood STEM programs; flexibility and customization of offerings; and the collaboration between ASSET and other organizations to bring programs to scale for schools.
+</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+In the end, educators have the same ultimate goal in mind &#8211; student achievement. ASSET&#8217;s goal is to provide high quality professional development that supports educators in this important mission! </span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <strong style="font-family: Tahoma; font-size: 12pt; color: #0075bd;">If you missed the showcase and want to learn more about ASSET&#8217;s professional development, join us for another showcase at our Malvern location on October 22nd! For more information, please contact Karen Savitz at </strong>
+    <span style="color: #0075bd;">
+    </span>
+    <a href="mailto:ksavitz@assetinc.org" style="color: #0075bd;">
+      <strong style="font-family: Tahoma; font-size: 12pt;">ksavitz@assetinc.org</strong>
+    </a>
+    <span style="color: #0075bd;">
+    </span>
+    <strong style="color: #0075bd;">.</strong>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+Please share other key characteristics of effective professional development in the comments below!
+</span>
+  </div>
+</div>
+		</div>
+            <div id="pg0_V__rptPost_ctl02__newsPost__panDiscuss" class="postDiscuss">
+			
+                <a id="pg0_V__rptPost_ctl02__newsPost__hypDiscuss" class="postDiscussLink" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=26243df6-90bf-4d7a-8a8c-79b545e61317#addComment"><img src="/ICS/ui/common/images/PortletImages/Icons/comments.gif" style="border-width:0px;" />DISCUSS (0)</a>
+                
+                &nbsp;
+            
+		</div>
+            
+        
+	</div>
+    
+</div>
+</div> 
+        
+            
+<div class="postWrapper" >
+    <div id="pg0_V__rptPost_ctl03__newsPost__panPostStatus">
+	
+        <div id="pg0_V__rptPost_ctl03__newsPost__divPostItem" class="postItem">
+		
+            <div class="postTitle">
+                <a id="pg0_V__rptPost_ctl03__newsPost__hypTitle" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=b24c7daa-98eb-4793-9f8d-465460ff91f3">The Importance of STEM Fluency</a>  
+            </div>
+            <span id="pg0_V__rptPost_ctl03__newsPost__lblDateAttribution" class="postInfo">Tue, September 10 2013 &nbsp; 10:04 AM</span>
+            
+            <div id="pg0_V__rptPost_ctl03__newsPost__panContent" class="postContent">
+			
+            <div class="wysiwygtext">
+  <p>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Welcome to ASSET STEM Education&#8217;s blog! </span>
+  </p>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">
+      <img width="200" height="220" align="left" style="padding: 10px; text-align: left; float: left;" alt="" src="http://www.assetinc.org/media/41036/cynthia.gif" />
+Our goal is to share updates on current ASSET projects and partnerships as well as key national and state initiatives in Science, Technology, Engineering and Math (STEM) education.</span>
+  </div>
+  <div>&#160;</div>
+  <div>
+    <span style="font-family: Tahoma; font-size: 12pt;">As educators and students alike prepare for a new school year, I&#8217;d like to take a moment to reflect on the concept of STEM fluency. In addition to preparing students for careers as engineers, scientists, IT professionals and more, quality STEM education also inspires creativity and empowers students with the critical thinking skills essential in any career field. To compete in today&#8217;s global society, students must be more than STEM literate, they must be STEM fluent. STEM fluency is the intrinsic ability to problem solve, make application, create, innovate and communicate effectively.</span>
+  </div>
+  <div>&#160; </div>
+  <p>
+    <span style="color: rgb(0, 117, 189); font-family: Tahoma; font-size: 12pt;">
+      <strong>STEM literate students can: </strong>
+    </span>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">
+      <strong>
+      </strong>
+    </span>
+  </p>
+  <ul>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Comprehend information and ideas </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Analyze the quality and credibility of content </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Collaborate effectively with others </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Use text, tools and technology </span>
+    </li>
+  </ul>
+  <div>
+    <span style="color: rgb(0, 117, 189); font-family: Tahoma; font-size: 12pt;">
+&#160;&#160;&#160;&#160;&#160; <br /><strong>STEM fluent students can: </strong></span>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">
+    </span>
+  </div>
+  <ul>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Articulate a complex idea </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Apply systems and models from one application to another </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Know how to deconstruct and construct things of significance </span>
+    </li>
+    <li>
+      <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Internalize a skill to the point of transparency; it becomes second nature </span>
+    </li>
+  </ul>
+  <div>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Key to our efforts to foster STEM fluency are strategic partnerships between educators, businesses, government officials, policy makers and other STEM stakeholders. As the Pennsylvania&#160;<a href="http://www.stemx.us/" target="_blank">STEMx</a> representative, our goal in the coming months is to develop a STEM Learning Network in Pennsylvania. This network will provide a platform to share and scale up promising tools and practices that are improving efforts in STEM education. Together, we can inspire innovation for a brighter future. <br /><br /></span>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Stay tuned for future updates on the Pennsylvania STEM Learning Network, as well as other exciting STEM happenings! <br /><br /></span>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Cynthia Pulkowski <br /></span>
+    <span style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12pt;">Executive Director </span>
+  </div>
+</div>
+		</div>
+            <div id="pg0_V__rptPost_ctl03__newsPost__panDiscuss" class="postDiscuss">
+			
+                <a id="pg0_V__rptPost_ctl03__newsPost__hypDiscuss" class="postDiscussLink" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=View+Post&amp;screenType=next&amp;Id=b24c7daa-98eb-4793-9f8d-465460ff91f3#addComment"><img src="/ICS/ui/common/images/PortletImages/Icons/comments.gif" style="border-width:0px;" />DISCUSS (0)</a>
+                
+                &nbsp;
+            
+		</div>
+            
+        
+	</div>
+    
+</div>
+</div> 
+        
+    <div class="blogFontSize" style="float:left;margin-bottom:10px;">
+        <div id="pg0_V__divAvailLinks" style="float:left;padding-top:6px;">
+            <img src="/ICS/ui/common/images/PortletImages/Icons/archive.gif" alt="archive.gif" style="border-width:0px;" />&nbsp;<a id="pg0_V__itlArchive" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=Archive+View&amp;screenType=next">Older Items</a>
+        </div>
+        <div style="float:left;margin-left:20px;">
+            <img src="/ICS/ui/common/images/PortletImages/Icons/subscribe.gif" alt="subscribe.gif" style="border-width:0px;" />&nbsp;<a id="pg0_V__itlSubscribe" href="/ICS/ASSET_Blog.jnz?portlet=Blog&amp;screen=Subscribe&amp;screenType=next">Subscribe</a>
+            &nbsp;
+            
+            &nbsp;
+            <img src="/ICS/ui/common/images/PortletImages/Icons/rss.gif" alt="rss.gif" style="border-width:0px;" />&nbsp;<a id="pg0_V__itlRSS" href="https://online.assetinc.org/ICS/StaticPages/RssFeed.aspx?PortletID=db6898fd-e1eb-4c1d-a92d-e0253d28213e" target="blank">RSS Feed</a>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div></div></div>
+<div class="pColumnFoot pColumn1Foot containerFoot" ></div></div><div class="PORTLETGRIDFoot containerFoot"></div></div>
+	            <div class="portletsFoot containerFoot"></div></div>
+            <div class="mainLayoutFoot containerFoot"></div></div>
+            <div id="foot"><span id="policies"><a target="_blank" href="http://www.assetinc.org" title="ASSET Home Page">ASSET Home Page</a>|<a target="_blank" href="http://www.assetinc.org/our-philosophy/about-us.aspx" title="Information about this university.">About Us</a>|<a target="_blank" href="http://www.assetinc.org/contact.aspx" title="Information on how to get in touch with us.">Contact Us</a>|<a target="_blank" href="http://www.facebook.com/#!/pages/ASSET-Inc/311495088553" title="Like us on Facebook">Like us on Facebook</a>|<a target="_blank" href="http://twitter.com/#!/asseteducation" title="Follow us on Twitter">Follow us on Twitter</a>|<a target="_blank" href="http://servicesonline.assetinc.org/site-help" title="Site Help">Site Help</a></span><span id="copyright"> Powered by Jenzabar. v7.5.2</span></div>
+            
+        
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    </div>
+</body>
+</html>
