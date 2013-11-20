@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASSET STEM Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="datepicker/css/datepicker.css" rel="stylesheet" media="screen">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../../assets/js/html5shiv.js"></script>
+          <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            .logo {
+                height: 128px;
+                width: 139px;
+                background: url(img/logo.gif) no-repeat;
+                position: absolute;
+                left: 0;
+            }
+
+            .top-buffer {
+                margin-top:20px;
+            }
+
+            .up-top-buffer {
+                margin-top:40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="masthead" style="position:relative">
+                <a href="#" class="logo"></a>
+                <div style="width:80%;float:right">
+                    <ul class="nav nav-pills nav-justified navbar-inverse">
+                        <li><a href="#">Our Philosophy</a></li>
+                        <li><a href="#">Our Formula</a></li>
+                        <li><a href="#">Our Impact</a></li>
+                        <li><a href="#">Engage With Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li class="active"><a href="#">Online Service</a></li>
+                    </ul>
+                    <ul class="nav nav-tabs navbar-center" style="padding-top:50px">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Professional Development</a></li>
+                        <li><a href="#">Material Support</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <!--a data-toggle="modal" href="#myModal" class="btn btn-info" style="float:right">Login</a-->
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Please sign in</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-signin">
+                                <input type="text" class="form-control" placeholder="Email address" autofocus="">
+                                <input type="password" class="form-control" placeholder="Password">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-lg btn-primary" type="submit" onclick="document.location.href = 'Home_loggedin.html'" >Sign in</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <!-- search bar on top-->
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="row top-buffer">
+                        <div class="input-group">
+
+                            <input type="text" class="form-control"> 
+                            <span class="input-group-btn">
+                                <button class="btn btn-default">
+                                    Search
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- / search bar -->
+            <div class="row">
+
+                <div class="col-md-2">
+
+                    <div class="row">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Search by Date
+                                <i class="glyphicon glyphicon-search"></i>
+                            </div>
+                            <div class="panel-body">
+                                <!-- Date Picker goes here -->
+                                <p> Start on </p>
+                                <div class="input-group date" id="dp3" data-date="12-02-2012" data-date-format="mm-dd-yyyy">
+                                    <input class="form-control" type="text" readonly="" value="12-02-2012">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calender"></i></span>
+
+                                </div>
+                                <p class="top-buffer"> To </p>
+                                <div class="input-group date" id="dp2" data-date="12-02-2012" data-date-format="mm-dd-yyyy">
+                                    <input class="form-control" type="text" readonly="" value="12-02-2012">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calender"></i></span>
+
+                                </div>
+                                <input class="form-control top-buffer" type="button" value="search">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class = "panel panel-default">
+                                <div class="panel-heading">Recently Viewed</div>
+                                <div class="panel-body">
+                                    <!-- list group -->
+                                    <!--ul class ="list-group">
+                                        <li class ="list-group-item"> PD1 </li>
+                                        <li class ="list-group-item"> PD2 </li>
+                                    </ul-->
+
+                                    <div class ="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/logo,gif" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p> PD1 </p>
+                                        </div>
+                                    </div>
+                                    <div class ="media top-buffer">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/logo,gif" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p> PD1 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class = "panel panel-default">
+                                <div class="panel-heading">Featured</div>
+                                <div class="panel-body">
+                                    <!-- list group -->
+                                    <div class ="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/logo,gif" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p> PD1 </p>
+                                        </div>
+                                    </div>
+                                    <div class ="media top-buffer">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/logo,gif" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p> PD1 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-md-9 col-md-offset-1">
+
+                    <!-- PD details go here -->
+                    <div class="jumbotron top-buffer">
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/logo.gif" height="120" width="120">
+                            </a>
+                            <div class="media-heading">
+                                PD 1
+                            </div>
+                            <div class="media-body">
+                                <p> This is the body of the PD</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rest of the PD details -->
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Description</div>
+                            <div class="panel-body">
+                                <p>This the detailed description of the PD</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Associated Materials</div>
+                            <div class="panel-body">
+                                <div class="row top-buffer">
+                                    <div class="col-md-2 col-md-offset-1">
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="img/logo.gif" height="20" width="20">
+                                            </a>
+                                            <div class="media-heading">
+                                                Material 1
+                                            </div>
+                                            <div class="media-body">
+                                                <p> $$$$</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-4">
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="img/logo.gif" height="20" width="20">
+                                            </a>
+                                            <div class="media-heading">
+                                                Material 2
+                                            </div>
+                                            <div class="media-body">
+                                                <p> $$$$</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full Schedule -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>All Available Sections</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row top-buffer">
+                                <div class="panel-group" id="accordion">                        
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                    Section A
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="datepicker/js/bootstrap-datepicker.js"></script>
+            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    $(".input-group.date").datepicker({autoclose: true, todayHighlight: true});
+                                });
+            </script>
+    </body>
+</html>
