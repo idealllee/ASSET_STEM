@@ -257,7 +257,7 @@
                     <!-- PAGE CONTENTS SHOULD GO HERE -->
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <h1>Find An Offering </h1>
+                            <h1>Find An Material </h1>
                             <h4>Advanced Search</h4>
                             <form  class="form-horizontal" role="form">
                                 <div class="form-group">
@@ -265,25 +265,6 @@
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="keyword"  placeholder="Search Keyword">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="keyword" class="col-sm-1 control-label">Location</label>
-                                    <div class="col-sm-2" style="padding-right: 5px;">
-                                        <input type="text" class="form-control" id="keyword" >
-                                    </div>
-                                    <label for="start" style="width: 125px; text-align: left;padding-right: 5px; padding-left: 0;" class="col-sm-2 control-label">Starts On or After</label>
-                                    <div style=" width: 155px; padding-left:0; padding-right: 10px;" class="col-sm-2">
-                                        <input type="date" class="form-control" id="start">
-                                    </div>
-                                    <label for="end" style="width: 120px; text-align: left;padding-right: 3px; padding-left: 0;" class="col-sm-2 control-label">End On or Before</label>
-                                    <div class="col-sm-2" style=" width: 155px; padding-left:0; padding-right: 0;">
-                                        <input type="date" class="form-control" id="end">
-                                    </div>
-                                    <label for="seats"  style="width: 50px; text-align: left; padding-left:5px; padding-right: 0;" class="col-sm-1 control-label">Seats</label>
-                                    <div style="width: 50px;padding-left:0; padding-right: 0;" class="col-sm-1">
-                                        <input type="number"  class="form-control" id="seats">
-                                    </div>
-
                                 </div>
                                 <div class="form-group">
                                     <label  style="width: 130px; text-align: left;" class="col-sm-2 control-label">Product Family</label>
@@ -313,6 +294,18 @@
                                     <div class="col-sm-2" style="padding-left:0px;">
                                         <select  class="form-control">
                                             <option>All</option>
+                                            <option>Earth Science</option>
+                                            <option>Life Science</option>
+                                            <option>Teaching & Learning Strategies</option>
+                                            <option>Physical Science</option>
+                                            <option>Engineering & Technology</option>
+                                            <option>Physical Science AND Engineering & Technology</option>
+                                        </select>
+                                    </div>
+                                    <label  style="width: 70px; text-align: left;" class="col-sm-2 control-label">Strand</label>
+                                    <div class="col-sm-2" style="padding-left:0px;">
+                                        <select  class="form-control">
+                                            <option>All</option>
                                             <option>PreK</option>
                                             <option>PreK-12</option>
                                             <option>K</option>
@@ -324,18 +317,6 @@
                                             <option>2</option>
                                             <option>1</option>
                                         </select>
-                                    </div>
-                                    <label  style="width: 70px; text-align: left;" class="col-sm-2 control-label">Strand</label>
-                                    <div class="col-sm-2" style="padding-left:0px;">
-                                       <select  class="form-control">
-                                            <option>All</option>
-                                            <option>Earth Science</option>
-                                            <option>Life Science</option>
-                                            <option>Teaching & Learning Strategies</option>
-                                            <option>Physical Science</option>
-                                            <option>Engineering & Technology</option>
-                                            <option>Physical Science AND Engineering & Technology</option>
-                                       </select>
                                     </div>
 
                                 </div>
@@ -352,50 +333,84 @@
                             <h4><strong>Search Results</strong></h4>
                             <h6>20 items founds</h5>
                                 <div class="row" style="padding-bottom: 10px">
-                                    <div class="col-md-3 col-sm-3">
-                                        <img style="width: 200px; height: 120px" src="images/bird.jpg" alt=""/>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <h5><strong>Discovering Animals</strong></h5>
-                                        <p>Pond snails, wiggle worms, and pill bugs, oh my! Students explore, sort, compare, and experience the similarities, differences, and basic needs of animals. Live pond snails, redworms,
-                                            and pill bugs encourage students to observe carefully, look closer with a hand lens, draw what they see, mimic movement, discover how parent and offspring'
-                                            <button style="padding: 0; font-size: 13px;" type="button" class="btn btn-link">View Schedule</button> </p>
-                                    </div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Item Number</th>
+                                                <th>Description</th>
+                                                <th>Category</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>EE102</td>
+                                                <td></td>
+                                                <td>Air & Weather</td>
+                                                <td>$165.00</td>
+                                                <td><input type="number"  value="0" min="1" /></td>
+                                                <td>
+                                                    <a href="#"><i class="icon-plus">  </i> Add to Plan</a>
+                                                    &nbsp; &nbsp;
+                                                    <a href="#"><i class="icon-shopping-cart"> </i> Add to Cart</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>RFEE102</td>
+                                                <td>Animals 2 x 2</td>
+                                                <td>Animals 2 x 2</td>
+                                                <td>$120.00</td>
+                                                <td>  <input type="number"  value="0" min="1" /></td>
+                                                <td>
+                                                    <a href="#"><i class="icon-plus">  </i> Add to Plan</a>
+                                                    &nbsp; &nbsp;
+                                                    <a href="#"><i class="icon-shopping-cart"> </i> Add to Cart</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>XEE102C</td>
+                                                <td>Description</td>
+                                                <td>Balance & Motion</td>
+                                                <td>$180.00 </td>
+                                                <td>  <input type="number"  value="0" min="1" /></td>
+                                                <td>
+                                                    <a href="#"><i class="icon-plus">  </i> Add to Plan</a>
+                                                    &nbsp; &nbsp;
+                                                    <a href="#"><i class="icon-shopping-cart"> </i> Add to Cart</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>EE102LX</td>
+                                                <td>Description</td>
+                                                <td>Biodiversity & the Development of Organisims</td>
+                                                <td>$46.00</td>
+                                                <td>  <input type="number" value="0" min="0" /></td>
+                                                <td>
+                                                    <a href="#"><i class="icon-plus">  </i> Add to Plan</a>
+                                                    &nbsp; &nbsp;
+                                                    <a href="#"><i class="icon-shopping-cart"> </i> Add to Cart</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>F1203LX</td>
+                                                <td>Description</td>
+                                                <td>Biodiversity & the Development of Organisims</td>
+                                                <td>$153.00</td>
+                                                <td>
+                                                    <input type="number"  value="0" min="1" />
+                                                </td>
+                                                <td>
+                                                    <a href="#"><i class="icon-plus">  </i> Add to Plan</a>
+                                                    &nbsp; &nbsp;
+                                                    <a href="#"><i class="icon-shopping-cart"> </i> Add to Cart</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="row" style="padding-bottom: 10px">
-                                    <div class="col-md-3 col-sm-3">
-                                        <img style="width: 200px; height: 120px" src="images/animal.jpg" />
-                                    </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <h5><strong>Animal Studies (STC)</strong></h5>
-                                        <p>Discover the concepts, skills and attitudes embedded in a specific module. Teachers will explore investigations, concepts and materials as both learner and teacher and will
-                                            benefit from in-depth modeling of strategies within each lesson, including: notebooking, assessment and inquiry. 
-                                            Teachers will leave with a deeper understanding of the concepts introduced and strategies for improving student achievement
-                                            <button style="padding: 0; font-size: 13px;" type="button" class="btn btn-link">View Schedule</button> </p>
-                                    </div>
-                                </div>
-                                <div class="row" style="padding-bottom: 10px">
-                                    <div class="col-md-3 col-sm-3">
-                                        <img style="width: 200px; height: 120px" src="images/diversity.jpg" alt=""/>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <h5><strong>Diversity of Life (FOSS) Middle School</strong></h5>
-                                        <p>ASSET’s aim is to provide teachers with quality module trainings to explore investigations, concepts and materials first-hand, as both learner and teacher.
-                                            Teachers will benefit from more in-depth modeling of strategies within each investigation, including notebooking, assessment, technology and inquiry 
-                                            <button style="padding: 0; font-size: 13px;" type="button" class="btn btn-link">View Schedule</button> </p>
-                                    </div>
-                                </div>
-                                <div class="row" style="padding-bottom: 10px">
-                                    <div class="col-md-3 col-sm-3">
-                                        <img style="width: 200px; height: 120px" src="images/butterfly.jpg" />
-                                    </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <h5><strong>The Life Cycle of Butterflies</strong></h5>
-                                        <p>Discover the concepts, skills and attitudes embedded in a specific module. Teachers will explore investigations, concepts 
-                                            and materials as both learner and teacher and will benefit from in-depth modeling of strategies within each lesson, including: notebooking, assessment and inquiry 
-                                            <button style="padding: 0; font-size: 13px;" type="button" class="btn btn-link">View Schedule</button> </p>
-                                    </div>
-                                </div>
+
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <div style="width: 300px; margin: 0 auto;">     
@@ -475,7 +490,7 @@
 
 
                 $(function() {
-                    $('#search-results').hide();
+                    //   $('#search-results').hide();
 
                     $('#submit').click(function() {
                         $('#search-results').show();
