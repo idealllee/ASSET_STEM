@@ -6359,14 +6359,42 @@ Header Element, Container for
 Navigation
 */
 /* Nav Config */
+.home-navigation {
+    float: left;
+    padding: 0 0 0 0;
+    margin: 0;
+    list-style-type: none;
+    /*height: 85px;*/
+}
+
+
+.home-navigation > li {
+    float: left;
+    margin-right: 24px;
+}
+
+
+/* First Level Styling */
+.home-navigation > li > a {
+    color: #c3c3c3;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-size: 12px;
+    text-decoration: none;
+    /*height: 85px;*/
+/*    line-height: 90px;*/
+    display: inline-block;
+    position: relative;
+    padding-right: 12px;
+}
+
 .navigation {
     float: right;
     padding: 0 0 0 0;
     margin: 0;
     list-style-type: none;
-    height: 85px;
+    /*height: 85px;*/
 }
-
 .navigation > li {
     float: left;
     margin-right: 24px;
@@ -6379,8 +6407,8 @@ Navigation
     font-family: "Open Sans";
     font-size: 12px;
     text-decoration: none;
-    height: 85px;
-    line-height: 90px;
+    /*height: 85px;*/
+    line-height:90px;
     display: inline-block;
     position: relative;
     padding-right: 12px;
