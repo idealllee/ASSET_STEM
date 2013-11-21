@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Account- Teacher's List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+	<style type="text/css">
+		.logo {
+			height: 128px;
+			width: 139px;
+			background: url(img/logo.gif) no-repeat;
+			position: absolute;
+			left: 0;
+		}
+		
+		body
+	</style>
+  </head>
+  <body>
+  <div class="container" style="width:90%">
+  
+  <div class="masthead" style="position:relative">
+		<a href="#" class="logo"></a>
+		<div style="width:80%;float:right">
+			<ul class="nav nav-pills nav-justified navbar-inverse">
+			  <li><a href="#">Our Philosophy</a></li>
+			  <li><a href="#">Our Formula</a></li>
+			  <li><a href="#">Our Impact</a></li>
+			  <li><a href="#">Engage With Us</a></li>
+			  <li><a href="#">Contact Us</a></li>
+			  <li class="active"><a href="#">Online Service</a></li>
+			</ul>
+			<ul class="nav nav-tabs navbar-center" style="padding-top:50px">
+			  <li><a href="Home_loggedin.html">Home</a></li>
+			  <li><a href="#">Professional Development</a></li>
+			  <li><a href="#">Material Support</a></li>
+			  <li><a href="#">Customer Support</a></li>
+			  <li><a href="#">My Cart</a></li>
+			  <li class="active"><a href="MyAccount_MyProfile.html">My Account</a></li>
+			  <li style="float:right"><a href="#">Hello, Mark Zuckerburg</a></li>
+			</ul>
+	    </div>
+  </div>
+			  
+	
+	<!--sidebar-->
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="padding-left: 0;padding-top: 20px;width:22%;font-size:small">
+		<div class="well sidebar-nav">
+			<ul class="nav">
+				<li>Profile Settings</li>
+				<li><a href="MyAccount_MyProfile.html">My Profile</a></li>
+				<li><a href="MyAccount_ChangePassword.html">Change Password</a></li>
+				<li>My Plans</li>
+				<li><a href="#">My PD Plan</a></li>
+				<li><a href="#">My Material Support Plan</a></li>
+				<li>My History</li>
+				<li><a href="#">Order Report</a></li>
+				<li><a href="#">Registration Report</a></li>
+				<li>Teacher List (Only SOS)</li>
+				<li><a href="MyAccount_TeacherList.html">Teacher's List</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<table class="table table-striped" style="float:left;margin-top:20px;width:75%">  
+        <thead>  
+          <tr>  
+            <th>Name</th>
+            <th>School</th>
+            <th>E-Mail</th>
+            <th>Remove</th>
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <th>Linda Rosenburg</th>
+            <th>Manchester PreK-8</th>
+            <th>linda.rosenburg@manpre.org</th>  
+            <th>
+            	<button type="button" class="btn btn-default btn-small">
+  					<span class="glyphicon glyphicon-remove"></span> Remove
+				</button>
+			</th>
+          </tr>
+          <tr>  
+            <th>Linda Rosenburg</th>
+            <th>Manchester PreK-8</th>
+            <th>linda.rosenburg@manpre.org</th>  
+            <th>
+            	<button type="button" class="btn btn-default btn-small">
+  					<span class="glyphicon glyphicon-remove"></span> Remove
+				</button>
+			</th>
+          </tr>
+          <tr>  
+            <th>Linda Rosenburg</th>
+            <th>Manchester PreK-8</th>
+            <th>linda.rosenburg@manpre.org</th>  
+            <th>
+            	<button type="button" class="btn btn-default btn-small">
+  					<span class="glyphicon glyphicon-remove"></span> Remove
+				</button>
+			</th>
+          </tr>        
+        </tbody>          
+      </table>
+
+    <div class="row">
+		<div class="col-xs-8 col-sm-8">
+			<h4 style="float:left">Add a new teacher to your list</h4>
+		</div>
+		<div class="row">
+		    <div class="col-xs-8 col-sm-8">
+		    	<form class = "form-inline" role="form" style="margin-top:10px">
+				<div class="form-group">
+					<label class = "sr-only" for="teacherName">Name</label>
+					<input type="input" class="form-control" id="teacherName" placeholder="Enter Teacher's Name">
+				</div>
+				<div class="form-group">
+					<label class = "sr-only" for="teacherSchool">School</label>
+					<input type="input" class="form-control" id="teacherSchool" placeholder="Enter Teacher's school">
+				</div>
+				<div class="form-group">
+					<label class = "sr-only" for="teacherEmail">E-Mail</label>
+					<input type="input" class="form-control" id="teacherEmail" placeholder="Enter Teacher's E-mail">
+				</div>  			
+				</form>
+		    </div>
+		<div class="row">
+			<div style="float:left;margin-top:10px;padding-left:16px">
+				<button type="submit" class="btn btn-default btn-small">
+					<span class="glyphicon glyphicon-floppy-save"></span> Add Teacher
+				</button>
+				<button type="submit" class="btn btn-default btn-small">Clear</button>
+			</div>	
+		</div>
+    </div>
+
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+</html>

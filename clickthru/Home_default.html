@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>ASSET STEM Home</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- Bootstrap -->
+			<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+				
+				<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+				<!--[if lt IE 9]>
+				 <script src="../../assets/js/html5shiv.js"></script>
+				 <script src="../../assets/js/respond.min.js"></script>
+				 <![endif]-->
+				<style type="text/css">
+					.logo {
+						height: 128px;
+						width: 139px;
+						background: url(img/logo.gif) no-repeat;
+						position: absolute;
+						left: 0;
+					}
+					
+					body
+					</style>
+				</head>
+	<body>
+		
+		<div class="container" style="width:90%">
+			
+			<div class="masthead" style="position:relative">
+				<a href="#" class="logo"></a>
+				<div style="width:80%;float:right">
+					<ul class="nav nav-pills nav-justified navbar-inverse">
+						<li><a href="#">Our Philosophy</a></li>
+						<li><a href="#">Our Formula</a></li>
+						<li><a href="#">Our Impact</a></li>
+						<li><a href="#">Engage With Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li class="active"><a href="#">Online Service</a></li>
+					</ul>
+					<ul class="nav nav-tabs navbar-center" style="padding-top:50px">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Professional Development</a></li>
+						<li><a href="#">Material Support</a></li>
+						<li><a href="#">Customer Support</a></li>
+						<a data-toggle="modal" href="#myModal" class="btn btn-info" style="float:right">Login</a>
+						
+					</ul>
+			    </div>
+			</div>
+			
+			<!-- Login Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h3 class="modal-title">Please sign in</h3>
+						</div>
+						<div class="modal-body">
+							<form class="form-signin">
+								<input type="text" class="form-control" placeholder="Email address" autofocus="">
+									<input type="password" class="form-control" placeholder="Password">
+										<label class="checkbox">
+											<input type="checkbox" value="remember-me"> Remember me
+												</label>
+										</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-lg btn-primary" type="submit" onclick="document.location.href='Home_loggedin.html'" >Sign in</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+			<!--sidebar-->
+			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="padding-left: 0;padding-top: 20px;width:22%;font-size:small">
+				<div class="well sidebar-nav">
+					<ul class="nav">
+						<li>Professional Development</li>
+						<li class="active"><a href="#">Click here to see our catalogues!</a></li>
+						<li>Material Support</li>
+						<li><a href="#">Elementary curriculum materials</a></li>
+						<li><a href="#">Middle School curriculum materials</a></li>
+						<li><a href="#">Engineering curriculum materials</a></li>
+						<li><a href="#">ASSET course curriculum 2012-14</a></li>
+						<li>Support-On-Site</li>
+						<li><a href="#">Newsroom</a></li
+							<li>Investing in Innovation (I3)</li>
+						<li><a href="#">i3 Newsroom</a></li>
+						<li>Blogs</li>
+						<li><a href="#">ASSET blog</a></li>
+					</ul>
+				</div><!--/.well -->
+	        </div>
+
+	        <!-- Product Family Modal -->
+			<div class="modal fade" id="pfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h3 class="modal-title">Fabric</h3>
+						</div>
+						<div class="modal-header">
+							Description
+						</div>
+						<div class="modal-header">
+							Related PD Offerings</br>
+							<ul>
+							<li><a href="">Fabric(FOSS)</a></li>
+							</ul>
+						</div>
+						<div class="modal-body">
+							Related Material</br>
+							<ul>
+							<li><a href="">FOSS Fabric</a></li>
+							<li><a href="">FOSS Fabric Lease Extension</a></li>
+							<li><a href="">FOSS Fabric - Refill Kit</a></li>
+							<li><a href="">FOSS Fabric - xConsume</a></li>
+							<li><a href="">Teacher Guide - FOSS Fabric</a></li>
+							</ul>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+	        <!--product family-->
+	        <div style="float:left;width:58%;padding-top:20px;font-size:x-small" >
+		       	<table class="table table-striped">
+				 <thead style="font-size:small">
+				 <tr>
+				  <td>Grade</td>
+				  <td>Life Science</td>
+				  <td>Earth Science</td>
+				  <td>Physical Science</td>
+				  <td>Engineering &amp; Technology</td>
+				 </tr>
+				 </thead>
+				 <tr>
+				  <td>Pre-K</td>
+				  <td>Discovering Plants<br>
+				  My Senses</td>
+				  <td></td>
+				  <td>Push Pull Go</td>
+				  <td>Push Pull Go</td>
+				 </tr>
+				 <tr>
+				  <td>K</td>
+				  <td>Animals 2 x 2<br>
+				  Discovering Animals<br>
+				  Discovering Plants<br>
+				  My Senses<br>
+				  Trees</td>
+				  <td></td>
+				  <td><a data-toggle="modal" href="#pfModal">Fabric</a><br>
+				  Patterns All Around<br>
+				  Push Pull Go<br>
+				  Wood &amp; Paper</td>
+				  <td>Digging Earth<br>
+				  Push Pull Go</td>
+				 </tr>
+				 <tr>
+				  <td>1</td>
+				  <td>Insects<br>
+				  Organisms</td>
+				  <td>Air &amp; Weather<br>
+				  Weather</td>
+				  <td>Balance &amp; Motion<br>
+				  STC Solids &amp; Liquids</td>
+				  <td>Comparing &amp; Measuring</td>
+				 </tr>
+				 <tr>
+				  <td>2</td>
+				  <td>Life Cycle of Butterflies<br>
+				  New Plants</td>
+				  <td>Pebbles, Sand &amp; Silt<br>
+				  Soils</td>
+				  <td>Changes<br>
+				  FOSS Solids &amp; Liquids</td>
+				  <td>Balancing &amp; Weighing</td>
+				 </tr>
+				 <tr>
+				  <td>3</td>
+				  <td>Plant Growth &amp;
+				  Development<br>
+				  Structures of Life</td>
+				  <td>Earth Materials<br>
+				  Rocks &amp; Minerals</td>
+				  <td>Chemical Tests<br>
+				  Magnetism &amp; Electricity</td>
+				  <td>Ideas &amp; Inventions<br>
+				  Designing
+				  Parachutes Kit<br>
+				  Designing Lighting
+				  Systems Kit<br>
+				  Designing Solar Ovens<br>
+				  Sounds</td>
+				 </tr>
+				 <tr>
+				  <td>4</td>
+				  <td>Animal Studies<br>
+				  Human Body</td>
+				  <td>Water</td>
+				  <td>Land &amp; Water<br>
+				  Measurement</td>
+				  <td>Electric Circuits<br>
+				  Designing
+				  Parachutes Kit<br>
+				  Designing Lighting
+				  Systems Kit<br>
+				  Designing Solar Ovens<br>
+				  Physics of Sound</td>
+				 </tr>
+				 <tr>
+				  <td>5</td>
+				  <td>Environments<br>
+				  Microworlds</td>
+				  <td>Ecosystems<br>
+				  Landforms</td>
+				  <td>Levers &amp; Pulleys<br>
+				  Motion &amp; Design</td>
+				  <td>Floating &amp; Sinking<br>
+				  Designing
+				  Parachutes Kit<br>
+				  Designing Lighting
+				  Systems Kit<br>
+				  Models &amp; Designs<br>
+				  Designing Solar Ovens</td>
+				 </tr>
+				 <tr>
+				  <td>6</td>
+				  <td>Biodiversity &amp; the
+				  Development of Organisims<br>
+				  Digestion, Motion, Respiration &amp; Circulation<br>
+				  Diversity of Life<br>
+				  Experiments with Plants<br>
+				  Food &amp; Nutrition<br>
+				  Populations and Ecosystems<br>
+				  Science &amp; Life Issues</td>
+				  <td>Earth History<br>
+				  Measuring Time<br>
+				  Sun-Earth-Moon &amp; Planetary Systems<br>
+				  Weather Climate and Plate Tectonics<br>
+				  Weather &amp; Water</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Matter, Mixture, Compounds and Elements<br>
+				  Variables</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Magnets &amp; Motors<br>
+				  Matter, Mixture, Compounds and Elements<br>
+				  Mixtures &amp; Solutions</td>
+				 </tr>
+				 <tr>
+				  <td>7</td>
+				  <td>Biodiversity &amp; the
+				  Development of Organisims<br>
+				  Digestion, Motion, Respiration &amp; Circulation<br>
+				  Diversity of Life<br>
+				  Populations and Ecosystems<br>
+				  Science &amp; Life Issues</td>
+				  <td>Earth History<br>
+				  Sun-Earth-Moon &amp; Planetary Systems<br>
+				  Weather Climate and Plate Tectonics<br>
+				  Weather &amp; Water</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Matter, Mixture, Compounds and Elements</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Matter, Mixture, Compounds and Elements</td>
+				 </tr>
+				 <tr>
+				  <td>8</td>
+				  <td>Biodiversity &amp; the
+				  Development of Organisims<br>
+				  Digestion, Motion, Respiration &amp; Circulation<br>
+				  Diversity of Life<br>
+				  Populations and Ecosystems<br>
+				  Science &amp; Life Issues</td>
+				  <td>Earth History<br>
+				  Sun-Earth-Moon &amp; Planetary Systems<br>
+				  Weather Climate and Plate Tectonics<br>
+				  Weather &amp; Water</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Matter, Mixture, Compounds and Elements</td>
+				  <td>Chemical Interactions<br>
+				  Circuit Design &amp; Electrical Systems<br>
+				  Force &amp; Motion<br>
+				  Forces, Motion, Motors and Simple Machines<br>
+				  Light &amp; Optical Systems<br>
+				  Matter, Mixture, Compounds and Elements</td>
+				 </tr>
+				</table>
+			</div>
+			<!--end product family-->
+			
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+	</body>
+</html>
