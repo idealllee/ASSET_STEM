@@ -201,7 +201,7 @@
 
                                         </li>
                                         <li  class="drop">
-                                            <a href="#">Services Online</a>
+                                            <a class="serviceonline" href="#">Services Online</a>
                                             <ul><li>
                                                     <a href="#">Member Login</a> </ul>
 
@@ -210,6 +210,16 @@
 
                                     </ul>
 
+                                </nav>
+
+                                <nav>
+                                    <ul class="submenu">
+                                        <li><a  href="#">Home</a></li>
+                                        <li><a class="active_sub"  href="#">Professional Development</a></li>
+                                        <li><a href="#">Materials Support</a></li>
+                                        <li><a  href="#">Customer Support</a></li>
+
+                                    </ul>
                                 </nav>
 
                                 <!-- Mobile Nav. Container -->
@@ -245,6 +255,9 @@
                                 <li>
                                     <a href="#">Home</a>
                                 </li>
+                                 <li>
+                                    <a href="#">Professional Development</a>
+                                </li>
                                 <li>Advanced Search</li>
                             </ul>
                         </div>
@@ -254,7 +267,7 @@
             <!-- BreadCrumb -->
             <div class="body-wrapper">
                 <div class="container">
-                    <!-- PAGE CONTENTS SHOULD GO HERE -->
+                    <!-- PAGE CONTENTS SHOULD GO HERE, DELETE CONTENTS WITHIN THE CONTAINER DIV AND PASTE YOUR OWN CONTENT-->
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <h1>Find An Offering </h1>
@@ -327,7 +340,7 @@
                                     </div>
                                     <label  style="width: 70px; text-align: left;" class="col-sm-2 control-label">Strand</label>
                                     <div class="col-sm-2" style="padding-left:0px;">
-                                       <select  class="form-control">
+                                        <select  class="form-control">
                                             <option>All</option>
                                             <option>Earth Science</option>
                                             <option>Life Science</option>
@@ -335,7 +348,7 @@
                                             <option>Physical Science</option>
                                             <option>Engineering & Technology</option>
                                             <option>Physical Science AND Engineering & Technology</option>
-                                       </select>
+                                        </select>
                                     </div>
 
                                 </div>
@@ -415,8 +428,9 @@
 
                         </div>
                     </div>
+                    
+                    <!-- STOP DELETING HERE -->
                 </div>
-
                 <footer>
                     <div class="footer">
 
@@ -441,6 +455,7 @@
                         </div>
                     </div>
                 </footer>
+
             </div>
 
 
@@ -475,11 +490,11 @@
 
 
                 $(function() {
-                    $('#search-results').hide();
+                $('#search-results').hide();
 
-                    $('#submit').click(function() {
-                        $('#search-results').show();
-                    });
+                $('#submit').click(function() {
+                $('#search-results').show();
+                });
                 });
 
             </script>
