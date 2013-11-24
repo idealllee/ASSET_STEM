@@ -21,7 +21,7 @@
 }
 
 .navigation > li > a, .navigation > li > a > i, .sticky-navigation .navigation > a {
-    color: #c1c1c1;
+  color: #fff;
 }
 
 .navigation > li:hover > a,
