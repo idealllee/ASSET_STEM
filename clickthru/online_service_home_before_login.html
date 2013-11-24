@@ -79,6 +79,61 @@
         <div class="sticky-navigation" id="sticky-navigation"></div>
         <!-- Sticky Nav -->
 
+		<!-- Login Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h3 class="modal-title">Please sign in</h3>
+						</div>
+						<div class="modal-body">
+							<form class="form-signin">
+								<input type="text" class="form-control" placeholder="Email address" autofocus="">
+									<input type="password" class="form-control" placeholder="Password">
+										<label class="checkbox">
+											<input type="checkbox" value="remember-me"> Remember me
+												</label>
+										</form>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-lg btn-primary" type="submit" onclick="document.location.href='online_service_home_after_loginin.html'" >Sign in</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+			<!-- Product Family Modal (Fabric)-->
+			<div class="modal fade" id="pfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h3 class="modal-title">Fabric</h3>
+						</div>
+						<div class="modal-header">
+							Description
+						</div>
+						<div class="modal-header">
+							Related PD Offerings</br>
+							<ul>
+							<li><a href="">Fabric(FOSS)</a></li>
+							</ul>
+						</div>
+						<div class="modal-body">
+							Related Material</br>
+							<ul>
+							<li><a href="">FOSS Fabric</a></li>
+							<li><a href="">FOSS Fabric Lease Extension</a></li>
+							<li><a href="">FOSS Fabric - Refill Kit</a></li>
+							<li><a href="">FOSS Fabric - xConsume</a></li>
+							<li><a href="">Teacher Guide - FOSS Fabric</a></li>
+							</ul>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
         <div id="wrapper">
 
             <div class="top_wrapper">
@@ -260,29 +315,7 @@
             <div class="body-wrapper">
                 <div class="container" style="width:100%">
                     <!-- PAGE CONTENTS SHOULD GO HERE, DELETE CONTENTS WITHIN THE CONTAINER DIV AND PASTE YOUR OWN CONTENT-->
-                    <!-- Login Modal -->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h3 class="modal-title">Please sign in</h3>
-						</div>
-						<div class="modal-body">
-							<form class="form-signin">
-								<input type="text" class="form-control" placeholder="Email address" autofocus="">
-									<input type="password" class="form-control" placeholder="Password">
-										<label class="checkbox">
-											<input type="checkbox" value="remember-me"> Remember me
-												</label>
-										</form>
-						</div>
-						<div class="modal-footer">
-							<button class="btn btn-lg btn-primary" type="submit" onclick="document.location.href='online_service_home_after_loginin.html'" >Sign in</button>
-						</div>
-					</div><!-- /.modal-content -->
-				</div><!-- /.modal-dialog -->
-			</div><!-- /.modal -->
+                    
 			
 			<!--sidebar-->
 			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="padding-left: 0;padding-top: 20px;width:23%;font-size:small">
@@ -304,37 +337,6 @@
 					</ul>
 				</div><!--/.well -->
 	        </div>
-
-	        <!-- Product Family Modal -->
-			<div class="modal fade" id="pfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-							<h3 class="modal-title">Fabric</h3>
-						</div>
-						<div class="modal-header">
-							Description
-						</div>
-						<div class="modal-header">
-							Related PD Offerings</br>
-							<ul>
-							<li><a href="">Fabric(FOSS)</a></li>
-							</ul>
-						</div>
-						<div class="modal-body">
-							Related Material</br>
-							<ul>
-							<li><a href="">FOSS Fabric</a></li>
-							<li><a href="">FOSS Fabric Lease Extension</a></li>
-							<li><a href="">FOSS Fabric - Refill Kit</a></li>
-							<li><a href="">FOSS Fabric - xConsume</a></li>
-							<li><a href="">Teacher Guide - FOSS Fabric</a></li>
-							</ul>
-						</div>
-					</div><!-- /.modal-content -->
-				</div><!-- /.modal-dialog -->
-			</div><!-- /.modal -->
 			
 	        <!--product family-->
 	        <div style="float:left;width:58%;padding-top:20px;font-size:x-small" >
