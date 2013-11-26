@@ -60,8 +60,18 @@
 
         </style>
         <!-- end remprod -->
-
-
+        <!-- modal css begin -->
+        <style type = "text/css">
+            #myModal .modal-dialog{
+                width: 900px;
+            }
+            #myModal .modal-body { max-height: 800px;}
+            /* #myModal {
+               width: 400px; /* SET THE WIDTH OF THE MODAL */
+            /*margin: -250px 0 0 -450px; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
+            /*}*/
+        </style>
+        <!-- modal css end -->
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
         <!-- Fonts -->
@@ -242,8 +252,10 @@
 
 
                     </div>
+
                 </header>
                 <!-- //Header// -->
+
 
             </div>
             <!-- BreadCrumb -->
@@ -257,7 +269,7 @@
                                 </li>
                                 <li>
                                     <a href="PDLandingPage.html">Professional Development</a>
-                                
+
                             </ul>
                         </div>
                     </div>
@@ -287,162 +299,163 @@
                     <!-- / search bar -->
                     <!--div class="row"-->
 
-                        <div class="col-md-2">
+                    <div class="col-md-2">
 
-                            <div class="row">
+                        <div class="row">
 
-                                <div class="panel panel-default">
-                                    <div class="panel-heading"> Search by Date
-                                        <i class="glyphicon glyphicon-search"></i>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"> Search by Date
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </div>
+                                <div class="panel-body">
+                                    <!-- Date Picker goes here -->
+
+                                    <div class="form-group">
+                                        <label for="start" style="width: 125px; text-align: left;padding-right: 3px; padding-left: 0;" class="col-sm-2 control-label">Starts On or After</label>
+                                        <!--div style=" width: 155px; padding-left:0; padding-right: 10px;" class="col-md-2"-->
+                                        <input type="date" class="form-control" id="start">
+                                        <!--/div-->
+                                        <label for="end" style="width: 125px; text-align: left;padding-right: 3px; padding-left: 0;" class="col-sm-2 control-label">End On or Before</label>
+                                        <!--div class="col-sm-2" style=" width: 155px; padding-left:0; padding-right: 10;"-->
+                                        <input type="date" class="form-control" id="end">
+                                        <!--/div-->
+                                        <input class="form-control" style="margin-top: 20px;" type="button" value="search">
                                     </div>
-                                    <div class="panel-body">
-                                        <!-- Date Picker goes here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class = "panel panel-default">
+                                <div class="panel-heading">Recently Viewed</div>
+                                <div class="panel-body">
+                                    <!-- l.ist group -->
+                                    <!--ul class ="list-group">
+                                        <li class ="list-group-item"> PD1 </li>
+                                        <li class ="list-group-item"> PD2 </li>
+                                    </ul-->
 
-                                        <div class="form-group">
-                                            <label for="start" style="width: 125px; text-align: left;padding-right: 3px; padding-left: 0;" class="col-sm-2 control-label">Starts On or After</label>
-                                            <!--div style=" width: 155px; padding-left:0; padding-right: 10px;" class="col-md-2"-->
-                                            <input type="date" class="form-control" id="start">
-                                            <!--/div-->
-                                            <label for="end" style="width: 125px; text-align: left;padding-right: 3px; padding-left: 0;" class="col-sm-2 control-label">End On or Before</label>
-                                            <!--div class="col-sm-2" style=" width: 155px; padding-left:0; padding-right: 10;"-->
-                                            <input type="date" class="form-control" id="end">
-                                            <!--/div-->
-                                            <input class="form-control" style="margin-top: 20px;" type="button" value="search">
+                                    <div class ="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/FabricFOSS.png" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p class="content-label"> <a href="PD_Details_Page.html">Fabric FOSS</a></p>
+                                        </div>
+                                    </div>
+                                    <div class ="media top-buffer">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/PatternsAllAround.png" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p class="content-label"> <a href="#">Patterns All Around BBS </a> </p>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                                <div class="row">
-                                    <div class = "panel panel-default">
-                                        <div class="panel-heading">Recently Viewed</div>
-                                        <div class="panel-body">
-                                            <!-- l.ist group -->
-                                            <!--ul class ="list-group">
-                                                <li class ="list-group-item"> PD1 </li>
-                                                <li class ="list-group-item"> PD2 </li>
-                                            </ul-->
-
-                                            <div class ="media">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src ="img/FabricFOSS.png" height="20" width="20">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="content-label"> <a href="PD_Details_Page.html">Fabric FOSS</a></p>
-                                                </div>
-                                            </div>
-                                            <div class ="media top-buffer">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src ="img/PatternsAllAround.png" height="20" width="20">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="content-label"> <a href="#">Patterns All Around BBS </a> </p>
-                                                </div>
-                                            </div>
+                        <div class="row">
+                            <div class = "panel panel-default">
+                                <div class="panel-heading">Featured</div>
+                                <div class="panel-body">
+                                    <!-- list group -->
+                                    <div class ="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/PushPull.png" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p class="content-label"> <a href="#"> Push, Pull, Go BBS </a> </p>
+                                        </div>
+                                    </div>
+                                    <div class ="media top-buffer">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src ="img/Wood.png" height="20" width="20">
+                                        </a>
+                                        <div class="media-body">
+                                            <p class="content-label"> <a href="#">Wood & Paper FOSS</a></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class = "panel panel-default">
-                                        <div class="panel-heading">Featured</div>
-                                        <div class="panel-body">
-                                            <!-- list group -->
-                                            <div class ="media">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src ="img/PushPull.png" height="20" width="20">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="content-label"> <a href="#"> Push, Pull, Go BBS </a> </p>
-                                                </div>
-                                            </div>
-                                            <div class ="media top-buffer">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src ="img/Wood.png" height="20" width="20">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="content-label"> <a href="#">Wood & Paper FOSS</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!--/div-->
+                            </div>
                         </div>
-                        <div class ="col-md-8 col-md-offset-1">
-                            <!-- First PD -->
-                            <div class ="row" style="margin-top: 40px;">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="img/FabricFOSS.png" height="60" width="60">
-                                    </a>                            
-                                    <div class="media-body">
-                                        <h4 class="media-heading content-label"><a href="PD_Details_Page.html">Fabric FOSS </a></h4>
-                                        <p class="content-label"> Fabric, a material so often taken for granted, makes a fascinating study for early-childhood
-                                            students. In the Fabric module, students are introduced to a wide variety of fabrics in a
-                                            systematic way so that they become familiar with fabrics’ properties ...</p>
-                                    </div>
+                        <!--/div-->
+                    </div>
+                    <div class ="col-md-8 col-md-offset-1">
+                        <!-- First PD -->
+                        <div class ="row" style="margin-top: 40px;">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/FabricFOSS.png" height="60" width="60">
+                                </a>                            
+                                <div class="media-body">
+                                    <h4 class="media-heading content-label"><a href="View%20Schedule.html#myModal">Fabric FOSS </a></h4>
+                                    <span class="label label-warning"><a data-toggle="modal" href="#myModal">View Schedule</a></span>
+                                    <p class="content-label"> Fabric, a material so often taken for granted, makes a fascinating study for early-childhood
+                                        students. In the Fabric module, students are introduced to a wide variety of fabrics in a
+                                        systematic way so that they become familiar with fabrics’ properties.</p>
                                 </div>
                             </div>
-                            <!-- First PD End -->
-                            <!-- Second PD Begin -->
-                            <div class ="row" style="margin-top: 20px;">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="img/PatternsAllAround.png" height="60" width="60">
-                                    </a>                            
-                                    <div class="media-body">
-                                        <h4 class="media-heading content-label"> <a href="#"> Wood & Paper</a> </h4>
-                                        <p class="content-label"> The modern world is a wonderland of different materials for early-childhood students. Two of
-                                            those materials are wood and the paper that is derived from it. In the Wood and Paper module,
-                                            students are introduced to a wide variety of woods and papers in a systematic way... </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Second PD End -->
-                            <!-- Third PD Begins -->
-                            <div class ="row" style="margin-top: 20px;">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="img/PushPull.png" height="60" width="60">
-                                    </a>                            
-                                    <div class="media-body">
-                                        <h4 class="media-heading content-label"> <a href="#"> Patterns All Around BBS</a> </h4>
-                                        <p class="content-label"> Bright blocks, real seashells, white clouds in a blue sky, finding the moon and the school bus
-                                            stopping at the mailbox - is there a connection? Build on students’ intuitive sense of patterns
-                                            with a series of seven lessons developed for today’s kindergarten scientist...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Third PD Ends -->
-                            <!-- Fourth PD Begins -->
-                            <div class ="row" style="margin-top: 20px;">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="img/Wood.png" height="60" width="60">
-                                    </a>                            
-                                    <div class="media-body">
-                                        <h4 class="media-heading content-label"> <a href="#"> Push Pull Go BBS</a> </h4>
-                                        <p class="content-label"> Build it, push it and watch it go. Students discover the patterns of how objects move as they
-                                            work through a series of lessons about motion. In the tradition of Rube Goldberg, your young
-                                            scientists build action toys that move...</p>
-                                    </div>
-                                </div>
-                            </div>                            
-                            <!-- Fourth PD Ends -->
-
-                            <!--Pagination begin -->
-
-                            <div class="row text-center">
-                                <ul class ="pagination pagination-sm">
-                                    <li> <a href="#">&laquo;</a></li>
-                                    <li> <a href="#">1</a></li>
-                                    <li> <a href="#">2</a></li>
-                                    <li> <a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Pagination End -->                  
-
                         </div>
+                        <!-- First PD End -->
+                        <!-- Second PD Begin -->
+                        <div class ="row" style="margin-top: 20px;">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/PatternsAllAround.png" height="60" width="60">
+                                </a>                            
+                                <div class="media-body">
+                                    <h4 class="media-heading content-label"> <a href="#"> Wood & Paper</a> </h4>
+                                    <p class="content-label"> The modern world is a wonderland of different materials for early-childhood students. Two of
+                                        those materials are wood and the paper that is derived from it. In the Wood and Paper module,
+                                        students are introduced to a wide variety of woods and papers in a systematic way... </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second PD End -->
+                        <!-- Third PD Begins -->
+                        <div class ="row" style="margin-top: 20px;">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/PushPull.png" height="60" width="60">
+                                </a>                            
+                                <div class="media-body">
+                                    <h4 class="media-heading content-label"> <a href="#"> Patterns All Around BBS</a> </h4>
+                                    <p class="content-label"> Bright blocks, real seashells, white clouds in a blue sky, finding the moon and the school bus
+                                        stopping at the mailbox - is there a connection? Build on students’ intuitive sense of patterns
+                                        with a series of seven lessons developed for today’s kindergarten scientist...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third PD Ends -->
+                        <!-- Fourth PD Begins -->
+                        <div class ="row" style="margin-top: 20px;">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/Wood.png" height="60" width="60">
+                                </a>                            
+                                <div class="media-body">
+                                    <h4 class="media-heading content-label"> <a href="#"> Push Pull Go BBS</a> </h4>
+                                    <p class="content-label"> Build it, push it and watch it go. Students discover the patterns of how objects move as they
+                                        work through a series of lessons about motion. In the tradition of Rube Goldberg, your young
+                                        scientists build action toys that move...</p>
+                                </div>
+                            </div>
+                        </div>                            
+                        <!-- Fourth PD Ends -->
+
+                        <!--Pagination begin -->
+
+                        <div class="row text-center">
+                            <ul class ="pagination pagination-sm">
+                                <li> <a href="#">&laquo;</a></li>
+                                <li> <a href="#">1</a></li>
+                                <li> <a href="#">2</a></li>
+                                <li> <a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Pagination End -->                  
+
+                    </div>
 
                     <!--/div-->
                 </div>
@@ -514,5 +527,59 @@
             });
 
         </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-width="760">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">View Schedule</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Here are the available sections</p>
+
+                        <table class="table table-striped">  
+                            <thead>  
+                                <tr>  
+                                    <th> </th>  
+                                    <th>Section</th>  
+                                    <th>Start Date</th>  
+                                    <th>End Date</th>  
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Location</th>
+                                </tr>  
+                            </thead>  
+                            <tbody>  
+                                <tr>  
+                                    <th><input type = "radio" name = "radio" VALUE = 1 CHECKED></th>  
+                                    <th>ACADEMYLEAN.1</th>  
+                                    <th>08/19/2013</th>  
+                                    <th>07/30/2014</th>  
+                                    <th>08:00 AM</th>
+                                    <th>08:00 PM</th>
+                                    <th>Pittsburgh</th>  
+                                </tr>  
+                                <tr>
+                                    <th><input type = "radio" name = "radio" VALUE = 0></th>
+                                    <th>ACADEMYLEAN.1</th>  
+                                    <th>08/19/2013</th>  
+                                    <th>07/30/2014</th>  
+                                    <th>08:00 AM</th>
+                                    <th>08:00 PM</th>
+                                    <th>Pittsburgh</th>       
+                                </tr> 
+                            </tbody>  
+                        </table> 
+                        <p> Please select a section and click on 'View Details' to reserve a seat</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button class="btn btn-success" type="submit" onclick="document.location.href = 'PD_Details_Page.html'" >View Details</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </body>
 </html>
