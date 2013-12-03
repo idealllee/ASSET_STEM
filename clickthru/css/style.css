@@ -6418,6 +6418,20 @@ Navigation
     padding-right: 12px;
 }
 
+.in-menu > li > a:hover, .in-menu > li > a:focus{
+    background: none;
+}
+
+.in-menu > li > a{
+    color: #fff;
+}
+
+ .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background-color: none !important;
+     background: none;
+}
+
+
 .submenu{
     padding: 0;
     margin: 0 0  0 10px;
@@ -6435,7 +6449,7 @@ Navigation
 }
 
 .active_sub{
-    padding-bottom: 5px;
+   /* padding-bottom: 3px;*/
     border-bottom: 4px solid #ff9a04;
     
 }
